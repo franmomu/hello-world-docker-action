@@ -8,7 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Test
-      uses: ./
-      with:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test
+        uses: ./
+        with:
           who-to-greet: 'Mona the Octocat'
